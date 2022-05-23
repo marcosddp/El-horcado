@@ -1,0 +1,233 @@
+@charset "UTF-8";
+/*
+
+  Con este reset vamos a resolver:
+    👉 Unificar el uso de Custom Properties
+    👉 Problemas de box-model más generales
+    👉 Problemas con imagenes, vídeos e iconos svg
+    👉 Problemas con tipografías y etiquetas input en formularios
+    👉 Unificar la tipografía de todas las etiquetas de una web
+
+*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+/* Aquí definimos las Custom properties */
+:root {
+  /*Colores*/
+  /* Tipografía */
+  --Inter: "Inter", sans-serif;
+}
+
+/* Las adaptamos al modo oscuro */
+/* Opcional */
+/* Configuramos si un usuario ha activado el modo alto contraste. (WD) */
+/* Opcional */
+/* Desactivamos los animations en el caso de que el usuario haya configurado el modo sin animation */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+/* Reseteamos los margin y paddings de todas las etiquetas */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+/* Evitamos problemas con las imagenes */
+img,
+picture,
+video,
+iframe,
+figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  /* opcional */
+  object-fit: cover;
+  /* opcional */
+  object-position: center center;
+}
+
+/* Reseteamos los enlaces para funcionar como cajas... */
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+/* ... excepto los que se encuentran en párrafos */
+p a {
+  display: inline;
+}
+
+/* Quitamos los puntos de los <li> */
+li {
+  list-style-type: none;
+}
+
+/* Configuramos anclas suaves */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+strong,
+blockquote,
+i,
+b,
+u,
+em {
+  font-size: 1em;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Evitamos problemas con los pseudoelementos de quotes */
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+/* Configuramos el texto que seleccionamos */
+/* Nivelamos problemas de tipografías y colocación de formularios */
+form,
+input,
+textarea,
+select,
+button,
+label {
+  font-family: inherit;
+  font-size: inherit;
+  hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+  /* opcional */
+  appearance: none;
+}
+
+/* Reseteamos las tablas */
+table,
+tr,
+td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Evitamos problemas con los SVG */
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+/* (Probándolo, no usar en producción) En el caso de añadir una  */
+/* p svg{
+  display: inline;
+  width: initial;
+} */
+/* Configuramos la tipografía para toda la web */
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  /* opcional */
+  line-height: 1.4em;
+  /* opcional */
+  hyphens: none;
+  /* opcional */
+  font-smooth: always;
+  /* opcional */
+  -webkit-font-smoothing: antialiased;
+  /* opcional */
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*root root root root*/
+:root {
+  /*valores*/
+  --padding-main: 40px;
+  /*Colores*/
+  --royal-blue-dark: #0a2463ff;
+  --tufts-blue: #3e92ccff;
+  --ghost-white: #fffaffff;
+  --cerise: #d8315bff;
+  --black-chocolate: #1e1b18ff;
+  /* Tipografía */
+}
+
+/*root root root root*/
+body {
+  background-color: var(--ghost-white);
+  color: var(--black-chocolate);
+  font-family: var(--Inter);
+}
+
+.hidden {
+  display: none;
+}
+
+.button-hover:hover {
+  transform: scale(1.1);
+  filter: contrast(1.1);
+}
+
+/*header header header header*/
+header {
+  padding-top: var(--padding-main);
+  padding-left: var(--padding-main);
+}
+header #logo {
+  width: 31px;
+  height: 31px;
+}
+
+/*header header header header*/
+/*main main main main*/
+main {
+  padding: var(--padding-main);
+  position: relative;
+}
+main #initiation {
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 25px;
+}
+main #initiation .start {
+  width: 317px;
+  height: 114px;
+  background-color: var(--cerise);
+  color: var(--ghost-white);
+  border-radius: 24px;
+}
+main #initiation .new-word {
+  width: 280px;
+  height: 67px;
+  border: 1px solid var(--cerise);
+  border-radius: 24px;
+}
+
+/*main main main main*/
+
+/*# sourceMappingURL=index.css.map */

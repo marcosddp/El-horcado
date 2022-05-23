@@ -1,0 +1,74 @@
+@import "config/app.scss";
+
+//https://coolors.co/0a2463-3e92cc-fffaff-d8315b-1e1b18
+
+/*root root root root*/
+:root {
+  /*valores*/
+  --padding-main: 40px;
+  /*Colores*/
+  --royal-blue-dark: #0a2463ff;
+  --tufts-blue: #3e92ccff;
+  --ghost-white: #fffaffff;
+  --cerise: #d8315bff;
+  --black-chocolate: #1e1b18ff;
+  /* Tipografía */
+}
+/*root root root root*/
+
+body {
+  background-color: var(--ghost-white);
+  color: var(--black-chocolate);
+  font-family: var(--Inter);
+}
+
+.hidden {
+  display: none;
+}
+
+.button-hover:hover {
+  transform: scale(1.1);
+  filter: contrast(1.1);
+}
+
+/*header header header header*/
+header {
+  padding-top: var(--padding-main);
+  padding-left: var(--padding-main);
+  #logo {
+    width: 31px;
+    height: 31px;
+  }
+}
+/*header header header header*/
+
+/*main main main main*/
+main {
+  padding: var(--padding-main);
+  position: relative;
+
+  #initiation {
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 25px;
+
+    .start {
+      width: 317px;
+      height: 114px;
+      background-color: var(--cerise);
+      color: var(--ghost-white);
+      border-radius: 24px;
+    }
+    .new-word {
+      width: 280px;
+      height: 67px;
+      border: 1px solid var(--cerise);
+      border-radius: 24px;
+    }
+    
+  }
+}
+/*main main main main*/
