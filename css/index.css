@@ -171,6 +171,7 @@ body {
   --ghost-white: #fffaffff;
   --cerise: #d8315bff;
   --black-chocolate: #1e1b18ff;
+  --outer-space-crayola: #343f3e;
   /* Tipografía */
 }
 
@@ -182,12 +183,20 @@ body {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
+}
+
+.hidden-transparent {
+  color: transparent !important;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .button-hover:hover {
-  transform: scale(1.1);
-  filter: contrast(1.1);
+  transform: scale(1.05);
+  filter: contrast(1.02);
 }
 
 /*header header header header*/
@@ -229,5 +238,79 @@ main #initiation .new-word {
 }
 
 /*main main main main*/
+/*challenge challenge challenge challenge*/
+#challenge {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+#challenge #challenge__text #text__problem {
+  display: flex;
+  flex-direction: row;
+  font-size: 49px;
+  column-gap: 25px;
+  margin-top: 65px;
+}
+#challenge #challenge__text #text__problem h3 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 64px;
+  color: var(--cerise);
+}
+#challenge #challenge__text #text__problem h3:before {
+  position: absolute;
+  content: "";
+  top: 40px;
+  width: 100%;
+  height: 4px;
+  background-color: var(--cerise);
+  border-radius: 8px;
+}
+#challenge #challenge__text #text__used {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  column-gap: 17px;
+}
+#challenge #challenge__text #text__used h3 {
+  font-size: 19.5px;
+  color: var(--outer-space-crayola);
+}
+#challenge #challenge__buttons {
+  display: flex;
+  column-gap: 20px;
+  margin-top: 75px;
+}
+#challenge #challenge__buttons button {
+  width: 308.76px;
+  height: 62.31px;
+  border-radius: 22.32px;
+}
+#challenge #challenge__buttons #new {
+  background-color: var(--cerise);
+  color: var(--ghost-white);
+}
+#challenge #challenge__buttons #stop {
+  border: 1px solid var(--cerise);
+  color: var(--cerise);
+}
+
+/*challenge challenge challenge challenge*/
+/*media querys media querys media querys*/
+@media (max-width: 500px) {
+  main #initiation {
+    font-size: 15px;
+  }
+  main #initiation .start {
+    width: 269.45px;
+    height: 96.9px;
+  }
+  main #initiation .new-word {
+    width: 238px;
+    height: 77.05px;
+  }
+}
+/*media querys media querys media querys*/
 
 /*# sourceMappingURL=index.css.map */

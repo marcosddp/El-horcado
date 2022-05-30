@@ -15,10 +15,34 @@
       </h1>
     </header>
     <main>
-      <div id="initiation">
+      <div id="initiation" class="hidden">
         <button class="start button-hover">Iniciar juego</button>
         <button class="new-word button-hover">Agregar nueva palabra</button>
       </div>
+      <div id="challenge">
+        <canvas id="imageView" width="320" height="320"></canvas>
+        <div id="challenge__text">
+          <div id="text__problem">
+            <h3>A</h3>
+            <h3 class="hidden-transparent">L</h3>
+            <h3>U</h3>
+            <h3>R</h3>
+            <h3>A</h3>
+          </div>
+          <div id="text__used">
+            <h3>B</h3>
+            <h3>J</h3>
+            <h3>K</h3>
+            <h3>C</h3>
+          </div>
+        </div>
+        <div id="challenge__buttons">
+          <button id="new" class="button-hover">Nuevo juego</button>
+          <button id="stop" class="button-hover">Desistir</button>
+        </div>
+      </div>
     </main>
+
+    <script type="text/javascript" src="scripts/dibujo.js"></script>
   </body>
 </html>
