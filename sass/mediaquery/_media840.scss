@@ -1,0 +1,71 @@
+
+/*header header header header*/
+header {
+  padding-top: var(--padding-main);
+  padding-left: var(--padding-main);
+  #logo {
+    width: 26.25px;
+    height: 26.25px;
+  }
+}
+/*header header header header*/
+
+main {
+
+
+  /*challenge challenge challenge challenge*/
+  #challenge {
+
+    
+
+    #challenge__text {
+      #text__problem {
+        font-size: clamp(30px,5.92vw,45px);//cambio a clamp
+        --column-gap:15px;
+        column-gap: var(--column-gap);
+        width: calc(100vw - (var(--padding-main) * 2)) ;
+        //justify-content: space-around;
+        margin-top: 60px;
+
+        h3 {
+          width: calc(7.19vw - 5px + (var(--cant-letra) *   var(--column-gap)));//se paso porcentaje
+          //max-width: 69px;
+
+          &:before {
+            top: 37.383px;
+            width: 100%;
+            height: 3.73px;
+
+            border-radius: 7.476px;
+          }
+        }
+      }
+      #text__used {
+        margin-top: 37.383px;
+        column-gap: 15.887px;
+        h3 {
+          font-size: clamp(16.78px,2.5vw,22.224px);
+        }
+      }
+    }
+    #challenge__buttons {
+      display: flex;
+      flex-direction: column;
+      column-gap: inherit;
+      row-gap: 18.69px;
+      margin-top: 70.09px;
+
+      button {
+        width: calc(100vw - var(--padding-main) * 2);
+        height: 62.31px;
+        border-radius: 22.32px;
+      }
+
+      #new {
+      }
+      #stop {
+      }
+    }
+  }
+  /*challenge challenge challenge challenge*/
+}

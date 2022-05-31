@@ -1,3 +1,7 @@
+:root {
+  --padding-main: 20px;
+}
+
 main {
   #initiation {
     font-size: 15px;
@@ -11,4 +15,35 @@ main {
       height: 77.05px;
     }
   }
+
+  /*challenge challenge challenge challenge*/
+  #challenge {
+    #imageView {
+      width: calc(85vw - 50px);
+    }
+
+    #challenge__text {
+      #text__problem {
+        font-size: clamp(20.5px, 6.4vw, 32px); //cambio a clamp
+        --column-gap: 15px;
+        column-gap: var(--column-gap);
+        width: calc(100vw - (var(--padding-main) * 2));
+
+        h3 {
+          &:before {
+            top: 30px;
+          }
+        }
+      }
+
+      #text__used {
+        margin-top: 30px;
+      }
+    }
+
+    #challenge__buttons {
+      margin-top: 55px;
+    }
+  }
+  /*challenge challenge challenge challenge*/
 }
