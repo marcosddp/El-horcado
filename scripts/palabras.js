@@ -50,4 +50,6 @@ const palabras = [
   "Esperar",
 ];
 
+
+
 export { palabras };
