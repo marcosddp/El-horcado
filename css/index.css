@@ -294,7 +294,7 @@ main #initiation .new-word {
   background-color: var(--cerise);
   color: var(--ghost-white);
 }
-#challenge #challenge__buttons #stop {
+#challenge #challenge__buttons #renounce {
   border: 1px solid var(--cerise);
   color: var(--cerise);
 }

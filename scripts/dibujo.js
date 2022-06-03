@@ -3,6 +3,12 @@ canvaso = document.getElementById("imageView");
 context = canvaso.getContext("2d");
 context.lineWidth = 5;
 
+export function borrarTodo(){
+
+  context.clearRect(0, 0, canvaso.width, canvaso.height)
+
+}
+
 export function dibujarHorca() {
   context.strokeStyle = "#d8315bff";
   context.beginPath();
