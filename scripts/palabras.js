@@ -48,6 +48,7 @@ const palabras = [
   "Bocina",
   "Peste",
   "Esperar",
+  "MESSI"
 ];
 
 
