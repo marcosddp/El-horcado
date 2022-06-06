@@ -158,12 +158,12 @@ main {
 /*add-word add-word add-word add-word*/
 #add-word{
 
- 
+  margin: 0 auto;
     margin-top: 80px;
-    margin-left: clamp(35px, 8.2vw, 125px);
     
-    min-width: 475px;
-    width: 680px;
+    
+    min-width: 425px;
+    width: 630px;
     padding-right: 25px;
 
     #add-word__input {

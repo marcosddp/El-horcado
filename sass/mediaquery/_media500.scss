@@ -47,3 +47,34 @@ main {
   }
   /*challenge challenge challenge challenge*/
 }
+
+
+/*add-word add-word add-word add-word*/
+#add-word {
+  margin: 0 auto;
+  margin-top: 45px;
+
+  min-width: inherit;
+  width: calc(100% - (var(--padding-main) * 2));
+  padding-right: 0;
+
+  #add-word__input {
+    font-size: clamp(24.8px, 2.22vw, 32px);
+
+    height: 345px;
+  }
+
+  #add-word__alert {
+  }
+
+  #add-word_buttons {
+    flex-direction: column;
+
+    row-gap: clamp(17.25px, 1.74vw, 25px);
+    button {
+      width: 100%;
+    }
+  }
+}
+
+/*add-word add-word add-word add-word*/

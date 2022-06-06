@@ -28,6 +28,31 @@ const letras = [
   "Z",
 ];
 
+export function existWord(newWords, word) {
+  let isExist = true;
+  for (let nws in newWords) {
+    if (newWords[nws].toLocaleUpperCase() == word.toLocaleUpperCase()) {
+      isExist = false;
+    }
+  }
+
+  return isExist;
+}
+
+export function palabraValida(palabra) {
+  if (palabra.length > 2 && palabra.length < 9) {
+    for (let p in palabra) {
+      if (!isABC(palabra[p].toLocaleUpperCase())) {
+        return false;
+      }
+    }
+
+    return true;
+  }
+
+  return false;
+}
+
 export function isABC(letra) {
   for (let l in letras) {
     if (letra.toUpperCase() == letras[l].toLocaleUpperCase()) {

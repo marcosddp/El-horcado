@@ -302,10 +302,10 @@ main #initiation .new-word {
 /*challenge challenge challenge challenge*/
 /*add-word add-word add-word add-word*/
 #add-word {
+  margin: 0 auto;
   margin-top: 80px;
-  margin-left: clamp(35px, 8.2vw, 125px);
-  min-width: 475px;
-  width: 680px;
+  min-width: 425px;
+  width: 630px;
   padding-right: 25px;
 }
 #add-word #add-word__input {
@@ -381,6 +381,10 @@ main #initiation .new-word {
 /*add-word add-word add-word add-word*/
 /*media querys media querys media querys*/
 @media (max-width: 840px) {
+  :root {
+    --padding-main: 25px;
+  }
+
   /*header header header header*/
   header {
     padding-top: var(--padding-main);
@@ -398,7 +402,7 @@ main #initiation .new-word {
   }
   main #challenge #challenge__text #text__problem {
     font-size: clamp(30px, 5.92vw, 45px);
-    --column-gap:15px;
+    --column-gap: 15px;
     column-gap: var(--column-gap);
     width: calc(100vw - var(--padding-main) * 2);
     margin-top: 60px;
@@ -431,6 +435,27 @@ main #initiation .new-word {
     height: 62.31px;
     border-radius: 22.32px;
   }
+  /*add-word add-word add-word add-word*/
+  #add-word {
+    margin: 0 auto;
+    margin-top: 60px;
+    min-width: inherit;
+    width: calc(100% - var(--padding-main) * 2);
+    padding-right: 0;
+  }
+  #add-word #add-word__input {
+    font-size: clamp(24.8px, 2.22vw, 32px);
+    height: 365px;
+  }
+  #add-word #add-word_buttons {
+    flex-direction: column;
+    row-gap: clamp(17.25px, 1.74vw, 25px);
+  }
+  #add-word #add-word_buttons button {
+    width: 100%;
+  }
+
+  /*add-word add-word add-word add-word*/
 }
 @media (max-width: 500px) {
   :root {
@@ -470,6 +495,28 @@ main #initiation .new-word {
   main #challenge #challenge__buttons {
     margin-top: 55px;
   }
+
+  /*add-word add-word add-word add-word*/
+  #add-word {
+    margin: 0 auto;
+    margin-top: 45px;
+    min-width: inherit;
+    width: calc(100% - var(--padding-main) * 2);
+    padding-right: 0;
+  }
+  #add-word #add-word__input {
+    font-size: clamp(24.8px, 2.22vw, 32px);
+    height: 345px;
+  }
+  #add-word #add-word_buttons {
+    flex-direction: column;
+    row-gap: clamp(17.25px, 1.74vw, 25px);
+  }
+  #add-word #add-word_buttons button {
+    width: 100%;
+  }
+
+  /*add-word add-word add-word add-word*/
 }
 /*media querys media querys media querys*/
 

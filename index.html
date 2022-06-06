@@ -15,13 +15,13 @@
       </h1>
     </header>
     <main>
-      <div id="initiation" class="hidden">
-        <button class="start button-hover">Iniciar juego</button>
-        <button class="new-word button-hover">Agregar nueva palabra</button>
+      <div id="initiation">
+        <button id="start" class="start button-hover">Iniciar juego</button>
+        <button id="new-word" class="new-word button-hover">Agregar nueva palabra</button>
       </div>
-      <div id="add-word">
+      <div id="add-word"  class="hidden">
         <div id="add-word__input">
-          <textarea placeholder="Ingrese el texto aqui"></textarea>
+          <textarea id="input__textarea" placeholder="Ingrese el texto aqui" minlength="3" maxlength="8"></textarea>
         </div>
         <div id="add-word__alert">
           <p>

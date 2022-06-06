@@ -1,3 +1,6 @@
+:root {
+  --padding-main: 25px;
+}
 
 /*header header header header*/
 header {
@@ -11,24 +14,21 @@ header {
 /*header header header header*/
 
 main {
-
-
   /*challenge challenge challenge challenge*/
   #challenge {
-
-    
-
     #challenge__text {
       #text__problem {
-        font-size: clamp(30px,5.92vw,45px);//cambio a clamp
-        --column-gap:15px;
+        font-size: clamp(30px, 5.92vw, 45px); //cambio a clamp
+        --column-gap: 15px;
         column-gap: var(--column-gap);
-        width: calc(100vw - (var(--padding-main) * 2)) ;
+        width: calc(100vw - (var(--padding-main) * 2));
         //justify-content: space-around;
         margin-top: 60px;
 
         h3 {
-          width: calc(7.19vw - 5px + (var(--cant-letra) *   var(--column-gap)));//se paso porcentaje
+          width: calc(
+            7.19vw - 5px + (var(--cant-letra) * var(--column-gap))
+          ); //se paso porcentaje
           //max-width: 69px;
 
           &:before {
@@ -44,7 +44,7 @@ main {
         margin-top: 37.383px;
         column-gap: 15.887px;
         h3 {
-          font-size: clamp(16.78px,2.5vw,22.224px);
+          font-size: clamp(16.78px, 2.5vw, 22.224px);
         }
       }
     }
@@ -69,3 +69,33 @@ main {
   }
   /*challenge challenge challenge challenge*/
 }
+
+/*add-word add-word add-word add-word*/
+#add-word {
+  margin: 0 auto;
+  margin-top: 60px;
+
+  min-width: inherit;
+  width: calc(100% - (var(--padding-main) * 2));
+  padding-right: 0;
+
+  #add-word__input {
+    font-size: clamp(24.8px, 2.22vw, 32px);
+
+    height: 365px;
+  }
+
+  #add-word__alert {
+  }
+
+  #add-word_buttons {
+    flex-direction: column;
+
+    row-gap: clamp(17.25px, 1.74vw, 25px);
+    button {
+      width: 100%;
+    }
+  }
+}
+
+/*add-word add-word add-word add-word*/
