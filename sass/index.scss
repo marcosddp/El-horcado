@@ -154,6 +154,119 @@ main {
 
 /*challenge challenge challenge challenge*/
 
+
+/*add-word add-word add-word add-word*/
+#add-word{
+
+ 
+    margin-top: 80px;
+    margin-left: clamp(35px, 8.2vw, 125px);
+    
+    min-width: 475px;
+    width: 680px;
+    padding-right: 25px;
+
+    #add-word__input {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: clamp(27.8px, 2.22vw, 32px);
+      
+      outline: none;
+      color: var(--cerise);
+      height: 400px;
+      width: 100%;
+
+      
+
+      textarea {
+        height: 100%;
+        width: 100%;
+        outline: none;
+       
+
+        &::placeholder {
+          color: var(--cerise);
+        }
+      }
+    }
+
+    #add-word__alert{
+      margin-top: 25px;
+      p {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+
+        color: var(--outer-space-crayola);
+
+        opacity: 0.8;
+        position: relative;
+
+        img {
+          height: 16px;
+          width: 16px;
+          margin-right: 8px;
+        }
+        
+      }
+    }
+
+    #add-word_buttons{
+      margin-top: 14px;
+      display: flex;
+      column-gap: clamp(17.25px, 1.74vw, 25px);
+      
+      button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+
+        width: calc(50% - 12.5px);
+        height: 67px;
+        border: 1px solid var(--dark-blue-300);
+        border-radius: 24px;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        transition: 0.9s all;
+
+        cursor: pointer;
+
+        &:hover{
+          filter: brightness(1.19);
+        }
+
+        &:active {
+          
+          filter: brightness(0.7);
+          transform: scale(0.96);
+         
+        }
+      }
+
+      #save {
+        background-color:  var(--cerise);
+        color: var(--ghost-white);
+      }
+
+      #cancel {
+        background:var(--ghost-white);
+        border: 1px solid var(--cerise);
+        color: var(--cerise);
+      }
+    }
+
+
+
+}
+
+
+/*add-word add-word add-word add-word*/
+
+
+
 /*media querys media querys media querys*/
 
 @media (max-width: 840px) {

@@ -19,7 +19,21 @@
         <button class="start button-hover">Iniciar juego</button>
         <button class="new-word button-hover">Agregar nueva palabra</button>
       </div>
-      <div id="challenge">
+      <div id="add-word">
+        <div id="add-word__input">
+          <textarea placeholder="Ingrese el texto aqui"></textarea>
+        </div>
+        <div id="add-word__alert">
+          <p>
+            <img src="img/esclamacion.svg" />Max. de 8 letras.
+          </p>
+        </div>
+        <div id="add-word_buttons">
+          <button id="save" class="button-hover">Guardar</button>
+          <button id="cancel" class="button-hover">Cancelar</button>
+        </div>
+      </div>
+      <div id="challenge" class="hidden">
         <canvas id="imageView" width="320" height="320"></canvas>
         <div id="challenge__text">
           <div id="text__problem">
@@ -48,12 +62,7 @@
       </div>
     </main>
 
-   <!--<script type="text/javascript" src="scripts/dibujo.js"></script>-->
-    <script src="scripts/app.js" type="module">
-
-      
-
-
-    </script>
+    <!--<script type="text/javascript" src="scripts/dibujo.js"></script>-->
+    <script src="scripts/app.js" type="module"></script>
   </body>
 </html>
