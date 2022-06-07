@@ -114,8 +114,9 @@ renounceButton.addEventListener("click", (event) => {
     for (let i = 1; i < 7; i++) {
       dibujarCuerpo(i);
     }
+    window.alert("FIN DEL JUEGO")
   }
-  window.alert("FIN DEL JUEGO")
+  
 });
 
 newWordButton.addEventListener("click", (event) => {
