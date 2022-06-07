@@ -32,43 +32,35 @@ let noFail = false;
 let jugando = false;
 
 function empezamos() {
-
   countFallo = 0;
   noFail = false;
   console.log(newWords != []);
-  if (newWords.length>0) {
-   
+  if (newWords.length > 0) {
     palabra = selectPalabra(newWords).toLocaleUpperCase();
     arrLetras = ocultarLetras(palabra);
     dibujarHorca();
     plasmarHorcado(arrLetras);
 
     console.log(newWords);
-    let aux=[]
-    for(let nws in newWords){
-
-      if(newWords[nws]!=palabra){
-        aux.push(newWords[nws])
+    let aux = [];
+    for (let nws in newWords) {
+      if (newWords[nws] != palabra) {
+        aux.push(newWords[nws]);
       }
-
     }
 
-    newWords=aux
-
+    newWords = aux;
 
     console.log(newWords);
   } else {
-  
     palabra = selectPalabra(palabras).toLocaleUpperCase();
     arrLetras = ocultarLetras(palabra);
     dibujarHorca();
     plasmarHorcado(arrLetras);
   }
- 
 }
 
-//console.log(arrLetras);
-//console.log(palabra)
+
 window.addEventListener(
   "keydown",
   function (event) {
@@ -99,7 +91,7 @@ window.addEventListener(
 
 newButton.addEventListener("click", (event) => {
   borrarTodo();
- empezamos();
+  empezamos();
 });
 
 renounceButton.addEventListener("click", (event) => {
@@ -117,9 +109,8 @@ newWordButton.addEventListener("click", (event) => {
 });
 
 saveButton.addEventListener("click", (event) => {
-  console.log(textarea.value);
-
   let newWord = textarea.value;
+  textarea.value = "";
   newWord = newWord.toLocaleUpperCase();
 
   if (palabraValida(newWord)) {
