@@ -94,18 +94,33 @@ export function ocultarLetras(palabra) {
   return arr;
 }
 
-export function plasmarHorcado(arrLetras) {
+export function plasmarHorcado(arrLetras,arrLetrasFallo) {
   let textProblem = document.getElementById("text__problem");
+  let textUsed= document.getElementById("text__used");
 
   while (textProblem.firstChild) {
     textProblem.removeChild(textProblem.firstChild);
   }
 
-  for (let letra in arrLetras) {
-    let p = document.createElement("h3");
-    let node = document.createTextNode(arrLetras[letra]);
-    p.appendChild(node);
-
-    textProblem.appendChild(p);
+  while (textUsed.firstChild) {
+    textUsed.removeChild(textUsed.firstChild);
   }
+
+  for (let letra in arrLetras) {
+    let h3 = document.createElement("h3");
+    let node = document.createTextNode(arrLetras[letra]);
+    h3.appendChild(node);
+
+    textProblem.appendChild(h3);
+
+  }
+
+  for(let letra in arrLetrasFallo){
+    let h4=document.createElement("h4");
+    let node2 = document.createTextNode(arrLetrasFallo[letra]);
+    h4.appendChild(node2);
+
+    textUsed.appendChild(h4);
+  }
+
 }

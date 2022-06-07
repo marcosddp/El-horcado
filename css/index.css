@@ -252,7 +252,7 @@ main #initiation .new-word {
   justify-content: center;
   font-size: 49px;
   column-gap: 25px;
-  margin-top: 65px;
+  margin-top: 55px;
 }
 #challenge #challenge__text #text__problem h3 {
   position: relative;
@@ -273,10 +273,10 @@ main #initiation .new-word {
 #challenge #challenge__text #text__used {
   display: flex;
   justify-content: center;
-  margin-top: 40px;
+  margin-top: 25px;
   column-gap: 17px;
 }
-#challenge #challenge__text #text__used h3 {
+#challenge #challenge__text #text__used h4 {
   font-size: 19.5px;
   color: var(--outer-space-crayola);
 }

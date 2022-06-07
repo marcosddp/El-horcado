@@ -26,6 +26,7 @@ let newWords = [];
 const limiteFallo = 6;
 let countFallo = 0;
 
+let arrLetrasFallo=[];
 let arrLetras = [];
 //65 - 90
 let noFail = false;
@@ -34,12 +35,12 @@ let jugando = false;
 function empezamos() {
   countFallo = 0;
   noFail = false;
-  console.log(newWords != []);
+  arrLetrasFallo=[]
   if (newWords.length > 0) {
     palabra = selectPalabra(newWords).toLocaleUpperCase();
     arrLetras = ocultarLetras(palabra);
     dibujarHorca();
-    plasmarHorcado(arrLetras);
+    plasmarHorcado(arrLetras,arrLetrasFallo);
 
     console.log(newWords);
     let aux = [];
@@ -64,10 +65,11 @@ function empezamos() {
 window.addEventListener(
   "keydown",
   function (event) {
+  
     if (jugando) {
       let letra = event.key.toLocaleUpperCase();
 
-      if (isABC(event.key) && countFallo < 7) {
+      if (isABC(event.key) && countFallo < 6  && palabra!=arrLetras.join("")) {
         for (let p in palabra) {
           if (palabra[p] == letra && arrLetras[p] == " ") {
             arrLetras[p] = palabra[p];
@@ -77,10 +79,22 @@ window.addEventListener(
 
         if (noFail) {
           noFail = false;
-          plasmarHorcado(arrLetras);
+          plasmarHorcado(arrLetras,arrLetrasFallo);
+          if(palabra==arrLetras.join("")){
+            this.alert("GANASTEEE!!")
+          }
         } else {
           countFallo++;
           dibujarCuerpo(countFallo);
+          if(countFallo==6){
+            this.alert("FIN DEL JUEGO")
+          }
+          if(existWord(arrLetrasFallo,letra)){
+            arrLetrasFallo.push(letra)
+            plasmarHorcado(arrLetras,arrLetrasFallo);
+
+          }
+
         }
       }
     }
@@ -96,11 +110,12 @@ newButton.addEventListener("click", (event) => {
 
 renounceButton.addEventListener("click", (event) => {
   if (palabra != arrLetras.join("")) {
-    plasmarHorcado(palabra);
+    plasmarHorcado(palabra,arrLetrasFallo);
     for (let i = 1; i < 7; i++) {
       dibujarCuerpo(i);
     }
   }
+  window.alert("FIN DEL JUEGO")
 });
 
 newWordButton.addEventListener("click", (event) => {
