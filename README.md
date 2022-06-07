@@ -1,5 +1,5 @@
 # El-horcado 
-
+ #challengeahorcado2
 VER DEMO:https://marcosddp.github.io/El-horcado/ 
 
 **juego del ahorcado** para que pongas en práctica lo que aprendiste a lo largo de esta formación **Principiante en Programación**.
@@ -18,3 +18,4 @@ VER DEMO:https://marcosddp.github.io/El-horcado/
 **Extras:**
 - La página debe tener un campo para inserción de texto con la finalidad de adicionar nuevas palabras al juego, e un botón "Agregar palabra". 
 
+ #challengeahorcado2  #challengeahorcado2  #challengeahorcado2  #challengeahorcado2  #challengeahorcado2  #challengeahorcado2
